@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.all_content{
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(135deg, var(--main-half), var(--main));
+}
+:root{
+    --main:#fd4646;
+    --text:#171427;
+    --bg:#fff;
+	--main-half:#ffeeee;
+}
+::selection{
+  background: #ff80bf;
+
+}
+:root{
+    --main:#fd4646;
+    --text:#171427;
+    --bg:#fff;
+}
+.all_cnt{
+  background: #fff;
+  max-width: 420px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+.all_cnt form .title{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+  
+}
+.all_cnt form .title:before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 33px;
+  left: 0px;
+  bottom: 3px;
+  border-radius: 5px;
+  background: linear-gradient(to right, var(--main-half), var(--main));
+}
+.all_cnt form .input-box{
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+.all_cnt form .input-box input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+.all_cnt form .underline::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+}
+.all_cnt form .underline::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, var(--main-half), var(--main));
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+.all_cnt form .input-box input:focus ~ .underline::after,
+.contaiall_cntner form .input-box input:valid ~ .underline::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.all_cnt form .button{
+  margin: 40px 0 20px 0;
+}
+.all_cnt .input-box input[type="submit"]{
+  background: linear-gradient(to right, var(--main-half), var(--main));
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.all_cnt .input-box input[type="submit"]:hover{
+  letter-spacing: 1px;
+  background: linear-gradient(to left, var(--main-half), var(--main));
+}
+.all_cnt .social{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom: 10px;
+    padding: 20px;
+    
+    
+}
+.all_cnt .social a {
+    color: var(--main); 
+    transition: .3s;
+    padding: 10px;
+}
+.all_cnt .social a:hover{
+    transform: translateY(-5px);
+}
